@@ -4,72 +4,51 @@ import android.app.Application
 import android.media.MediaPlayer
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.virasat.nammaguide.data.model.HeritageSite
 import com.virasat.nammaguide.data.repository.SiteRepository
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 
-/**
- * ViewModel for SiteDetailFragment.
- *
- * Manages:
- * - Currently selected site data
- * - MediaPlayer lifecycle (plays/pauses audio guide)
- * - Language toggle state (EN/KN)
- *
- * MediaPlayer is released in onCleared() to prevent crashes on back-navigation.
- */
 class SiteViewModel(application: Application) : AndroidViewModel(application) {
 
     private val repository = SiteRepository(application)
 
-    // ─── Currently displayed site ────────────────────────────────────────────
+    // ── All sites for Discovery screen ────────────────────────────────────────
+    val allSites: List<HeritageSite> = repository.allSites
 
-    private val _currentSite = MutableLiveData<HeritageSite?>()
-    val currentSite: LiveData<HeritageSite?> get() = _currentSite
+    // ── Currently loaded site ─────────────────────────────────────────────────
+    private val _currentSite = MutableStateFlow<HeritageSite?>(null)
+    val currentSite: StateFlow<HeritageSite?> = _currentSite.asStateFlow()
 
     fun loadSite(siteId: String) {
         _currentSite.value = repository.getSiteById(siteId)
     }
 
-    // ─── All sites for Discovery screen ──────────────────────────────────────
-
-    val allSites: List<HeritageSite> = repository.allSites
-
-    // ─── Language toggle ─────────────────────────────────────────────────────
-
-    private val _isKannada = MutableLiveData(false)
-    val isKannada: LiveData<Boolean> get() = _isKannada
+    // ── Language toggle (false = English, true = Kannada) ────────────────────
+    private val _isKannada = MutableStateFlow(false)
+    val isKannada: StateFlow<Boolean> = _isKannada.asStateFlow()
 
     fun toggleLanguage() {
-        _isKannada.value = !(_isKannada.value ?: false)
+        _isKannada.value = !_isKannada.value
     }
 
-    // ─── MediaPlayer ─────────────────────────────────────────────────────────
-
+    // ── Audio guide (MediaPlayer) ─────────────────────────────────────────────
     private var mediaPlayer: MediaPlayer? = null
 
-    private val _isPlaying = MutableLiveData(false)
-    val isPlaying: LiveData<Boolean> get() = _isPlaying
+    private val _isPlaying = MutableStateFlow(false)
+    val isPlaying: StateFlow<Boolean> = _isPlaying.asStateFlow()
 
-    /**
-     * Initialise MediaPlayer with the given raw resource.
-     * Called each time a new site is loaded.
-     */
     fun prepareAudio(audioResId: Int) {
         releaseMediaPlayer()
         if (audioResId == 0) return
         try {
             mediaPlayer = MediaPlayer.create(getApplication(), audioResId)?.apply {
-                setOnCompletionListener {
-                    _isPlaying.postValue(false)
-                }
+                setOnCompletionListener { _isPlaying.value = false }
             }
         } catch (e: Exception) {
-            Log.e("SiteViewModel", "MediaPlayer prepare error: ${e.message}")
+            Log.e("SiteViewModel", "MediaPlayer error: ${e.message}")
         }
     }
 
@@ -85,18 +64,12 @@ class SiteViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     private fun releaseMediaPlayer() {
-        mediaPlayer?.apply {
-            if (isPlaying) stop()
-            release()
-        }
+        mediaPlayer?.apply { if (isPlaying) stop(); release() }
         mediaPlayer = null
         _isPlaying.value = false
     }
 
-    /**
-     * CRITICAL: Release MediaPlayer here to prevent resource leak and crash
-     * when user navigates back.
-     */
+    /** CRITICAL: release MediaPlayer here to prevent crash on back-navigation */
     override fun onCleared() {
         super.onCleared()
         releaseMediaPlayer()

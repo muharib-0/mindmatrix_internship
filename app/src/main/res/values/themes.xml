@@ -1,91 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <!--
-        Base application theme — Indian Temple Architecture aesthetic.
-        colorPrimary     : #8B1A1A deep temple maroon
-        colorSecondary   : #C8860A sandstone gold
-        colorBackground  : #FDF3E3 aged parchment
-        Font             : Noto Serif (carved stone aesthetic)
+      Minimal Activity theme — Compose handles all UI theming internally via VirasatTheme.
+      This only sets the window background and status bar color.
     -->
-    <style name="Theme.VirasatNammaGuide" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <item name="colorPrimary">@color/color_primary</item>
-        <item name="colorPrimaryDark">@color/color_primary_dark</item>
-        <item name="colorAccent">@color/color_secondary</item>
-        <item name="colorSecondary">@color/color_secondary</item>
-        <item name="android:colorBackground">@color/color_background</item>
-        <item name="colorSurface">@color/color_surface</item>
-        <item name="colorOnPrimary">@color/color_on_primary</item>
-        <item name="colorOnBackground">@color/color_on_background</item>
-        <item name="colorOnSurface">@color/color_on_surface</item>
+    <style name="Theme.VirasatNammaGuide" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:statusBarColor">#6B1010</item>
+        <item name="android:navigationBarColor">#8B1A1A</item>
         <item name="android:windowBackground">@color/color_background</item>
-        <item name="android:statusBarColor">@color/color_status_bar</item>
-        <item name="android:navigationBarColor">@color/color_primary</item>
-        <item name="toolbarStyle">@style/Widget.Virasat.Toolbar</item>
-        <item name="android:fontFamily">@font/noto_serif</item>
     </style>
-
-    <!-- Custom Toolbar -->
-    <style name="Widget.Virasat.Toolbar" parent="Widget.MaterialComponents.Toolbar.Primary">
-        <item name="android:background">@color/color_primary</item>
-        <item name="titleTextColor">@color/color_on_primary</item>
-        <item name="subtitleTextColor">@color/color_secondary_light</item>
-    </style>
-
-    <!-- Card style — rounded corners, maroon border, parchment background -->
-    <style name="Widget.Virasat.Card" parent="Widget.MaterialComponents.CardView">
-        <item name="cardBackgroundColor">@color/color_surface</item>
-        <item name="cardCornerRadius">12dp</item>
-        <item name="cardElevation">4dp</item>
-        <item name="strokeColor">@color/color_card_border</item>
-        <item name="strokeWidth">1dp</item>
-    </style>
-
-    <!-- Section header text -->
-    <style name="TextAppearance.Virasat.SectionHeader" parent="TextAppearance.MaterialComponents.Subtitle1">
-        <item name="android:textColor">@color/color_primary</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textSize">14sp</item>
-        <item name="android:fontFamily">@font/noto_serif</item>
-        <item name="android:letterSpacing">0.08</item>
-    </style>
-
-    <!-- Site name large text -->
-    <style name="TextAppearance.Virasat.SiteName" parent="TextAppearance.MaterialComponents.Headline5">
-        <item name="android:textColor">@color/color_primary</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:fontFamily">@font/noto_serif</item>
-    </style>
-
-    <!-- Body text style -->
-    <style name="TextAppearance.Virasat.Body" parent="TextAppearance.MaterialComponents.Body1">
-        <item name="android:textColor">@color/color_on_surface</item>
-        <item name="android:lineSpacingMultiplier">1.5</item>
-        <item name="android:fontFamily">@font/noto_serif</item>
-    </style>
-
-    <!-- Primary Button style -->
-    <style name="Widget.Virasat.Button.Primary" parent="Widget.MaterialComponents.Button">
-        <item name="backgroundTint">@color/color_primary</item>
-        <item name="android:textColor">@color/color_on_primary</item>
-        <item name="cornerRadius">8dp</item>
-        <item name="android:fontFamily">@font/noto_serif</item>
-    </style>
-
-    <!-- Outlined Button style (for secondary actions) -->
-    <style name="Widget.Virasat.Button.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="strokeColor">@color/color_secondary</item>
-        <item name="android:textColor">@color/color_secondary</item>
-        <item name="cornerRadius">8dp</item>
-    </style>
-
-    <!-- Stamp badge style -->
-    <style name="Widget.Virasat.StampBadge">
-        <item name="android:background">@drawable/bg_stamp_badge</item>
-        <item name="android:textColor">@color/color_on_primary</item>
-        <item name="android:gravity">center</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:padding">8dp</item>
-    </style>
-
 </resources>
