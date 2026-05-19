@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ಅಪ್ಲಿಕೇಶನ್ ಹೆಸರು -->
+    <string name="app_name">ವಿರಾಸತ್ — ನಮ್ಮ ಮಾರ್ಗದರ್ಶಿ</string>
+    <string name="app_name_kannada">ವಿರಾಸತ್ — ನಮ್ಮ ಮಾರ್ಗದರ್ಶಿ</string>
+
+    <!-- ಪರದೆ ಶೀರ್ಷಿಕೆಗಳು -->
+    <string name="title_discovery">ಪಾರಂಪರಿಕ ತಾಣ ಅನ್ವೇಷಣೆ</string>
+    <string name="title_site_detail">ತಾಣ ವಿವರಗಳು</string>
+    <string name="title_qr_scanner">QR ಸ್ಕ್ಯಾನರ್</string>
+    <string name="title_passport">ನನ್ನ ಪಾಸ್‌ಪೋರ್ಟ್</string>
+
+    <!-- ಕೆಳ ನ್ಯಾವಿಗೇಶನ್ -->
+    <string name="nav_discover">ಅನ್ವೇಷಿಸಿ</string>
+    <string name="nav_qr_scan">QR ಸ್ಕ್ಯಾನ್</string>
+    <string name="nav_passport">ಪಾಸ್‌ಪೋರ್ಟ್</string>
+
+    <!-- ಅನ್ವೇಷಣೆ ಪರದೆ -->
+    <string name="label_discover_title">ಕರ್ನಾಟಕದ ಗುಪ್ತ ದೇವಾಲಯಗಳು</string>
+    <string name="label_discover_subtitle">ಪ್ರಸಿದ್ಧ ಮಾರ್ಗದಿಂದ ಹೊರಗೆ, ಕಲ್ಲಿನಲ್ಲಿ ಕೆತ್ತಲಾಗಿದೆ</string>
+    <string name="label_distance">%1$.1f ಕಿ.ಮೀ ದೂರದಲ್ಲಿ</string>
+
+    <!-- ತಾಣ ವಿವರ ಪರದೆ -->
+    <string name="label_description">ಈ ತಾಣದ ಬಗ್ಗೆ</string>
+    <string name="label_architectural_note">ವಾಸ್ತುಶಿಲ್ಪ ಮಹತ್ವ</string>
+    <string name="label_local_legend">ಸ್ಥಳೀಯ ಐತಿಹ್ಯ</string>
+    <string name="label_hidden_fact">🔓 ಗುಪ್ತ ಸಂಗತಿ (QR ಅನ್‌ಲಾಕ್)</string>
+    <string name="label_play_audio">▶ ಆಡಿಯೊ ಮಾರ್ಗದರ್ಶಿ ಆರಂಭಿಸಿ</string>
+    <string name="label_pause_audio">⏸ ಆಡಿಯೊ ಮಾರ್ಗದರ್ಶಿ ನಿಲ್ಲಿಸಿ</string>
+    <string name="label_switch_kannada">ಕನ್ನಡದಲ್ಲಿ ನೋಡಿ</string>
+    <string name="label_switch_english">ಇಂಗ್ಲಿಷ್‌ನಲ್ಲಿ ನೋಡಿ</string>
+    <string name="label_check_in">📍 ಇಲ್ಲಿ ಚೆಕ್ ಇನ್ ಮಾಡಿ</string>
+    <string name="label_already_checked_in">✓ ಭೇಟಿ ನೀಡಲಾಗಿದೆ</string>
+    <string name="msg_checked_in">%1$s ನಲ್ಲಿ ಚೆಕ್ ಇನ್ ಮಾಡಲಾಗಿದೆ!</string>
+
+    <!-- QR ಸ್ಕ್ಯಾನರ್ -->
+    <string name="label_scan_qr_instruction">ಪಾರಂಪರಿಕ ತಾಣ QR ಕೋಡ್‌ಗೆ ಕ್ಯಾಮೆರಾ ತಿರುಗಿಸಿ</string>
+    <string name="label_qr_found">✓ ತಾಣ ಕಂಡುಹಿಡಿಯಲಾಗಿದೆ: %1$s</string>
+    <string name="label_camera_permission_denied">QR ಕೋಡ್‌ಗಳನ್ನು ಸ್ಕ್ಯಾನ್ ಮಾಡಲು ಕ್ಯಾಮೆರಾ ಅನುಮತಿ ಅಗತ್ಯ.\nಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ಅನುಮತಿ ನೀಡಿ.</string>
+    <string name="label_scan_overlay">QR ಕೋಡ್ ಅನ್ನು ಚೌಕಟ್ಟಿನ ಒಳಗೆ ಜೋಡಿಸಿ</string>
+
+    <!-- ಪಾಸ್‌ಪೋರ್ಟ್ ಪರದೆ -->
+    <string name="label_passport_title">ನನ್ನ ಪಾರಂಪರಿಕ ಪಾಸ್‌ಪೋರ್ಟ್</string>
+    <string name="label_passport_empty_title">ಇನ್ನೂ ಯಾವುದೇ ಸ್ಟ್ಯಾಂಪ್ ಇಲ್ಲ!</string>
+    <string name="label_passport_empty_subtitle">ಪಾರಂಪರಿಕ ತಾಣಗಳಿಗೆ ಭೇಟಿ ನೀಡಿ ಮತ್ತು ನಿಮ್ಮ ಪಾಸ್‌ಪೋರ್ಟ್‌ನಲ್ಲಿ ಸ್ಟ್ಯಾಂಪ್ ಸಂಗ್ರಹಿಸಿ.</string>
+    <string name="label_stamps_collected">ಸ್ಟ್ಯಾಂಪ್‌ಗಳು ಸಂಗ್ರಹಿಸಲಾಗಿದೆ</string>
+    <string name="label_visited_on">ಭೇಟಿ ನೀಡಿದ ದಿನ</string>
+    <string name="label_stamp_badge">ಸ್ಟ್ಯಾಂಪ್</string>
+
+    <!-- ಪ್ರವೇಶಿಸುವಿಕೆ ವಿವರಣೆಗಳು -->
+    <string name="cd_site_thumbnail">ತಾಣ ಕಿರು ಚಿತ್ರ</string>
+    <string name="cd_audio_button">ಆಡಿಯೊ ಮಾರ್ಗದರ್ಶಿ ಪ್ಲೇ ಅಥವಾ ಪಾಸ್ ಮಾಡಿ</string>
+    <string name="cd_stamp_icon">ಪಾರಂಪರಿಕ ಸ್ಟ್ಯಾಂಪ್ ಬ್ಯಾಡ್ಜ್</string>
+    <string name="cd_language_toggle">ಇಂಗ್ಲಿಷ್ ಮತ್ತು ಕನ್ನಡ ನಡುವೆ ಭಾಷೆ ಬದಲಾಯಿಸಿ</string>
+</resources>

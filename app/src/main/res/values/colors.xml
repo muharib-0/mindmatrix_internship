@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand Colors — Indian Temple Architecture -->
+    <color name="color_primary">#8B1A1A</color>         <!-- Deep temple maroon -->
+    <color name="color_primary_dark">#6B1010</color>     <!-- Darker maroon -->
+    <color name="color_secondary">#C8860A</color>        <!-- Sandstone gold -->
+    <color name="color_secondary_light">#E8A020</color>  <!-- Lighter gold -->
+    <color name="color_background">#FDF3E3</color>       <!-- Aged parchment / ivory -->
+    <color name="color_surface">#FFF8F0</color>          <!-- Warm off-white -->
+    <color name="color_on_primary">#FFFFFF</color>
+    <color name="color_on_secondary">#1A0A00</color>
+    <color name="color_on_background">#2C1810</color>    <!-- Dark warm brown -->
+    <color name="color_on_surface">#2C1810</color>
+    <color name="color_divider">#C8860A</color>          <!-- Gold divider -->
+    <color name="color_card_border">#8B1A1A</color>
+    <color name="color_text_secondary">#7B4F35</color>   <!-- Warm mid-brown -->
+    <color name="color_legend_bg">#FFF0D0</color>        <!-- Warm legend card -->
+    <color name="color_stamp_bg">#8B1A1A</color>
+
+    <!-- Site thumbnail placeholder colors (warm earth tones) -->
+    <color name="site_color_1">#8B1A1A</color>   <!-- Maroon — Hampi -->
+    <color name="site_color_2">#5C3317</color>   <!-- Dark sandstone — Belur -->
+    <color name="site_color_3">#4A3728</color>   <!-- Chalukya dark — Badami -->
+    <color name="site_color_4">#2E4A3E</color>   <!-- Jain teal — Shravanabelagola -->
+    <color name="site_color_5">#6B4226</color>   <!-- Warm umber — Aihole -->
+
+    <!-- Toolbar / Status bar -->
+    <color name="color_toolbar">#8B1A1A</color>
+    <color name="color_status_bar">#6B1010</color>
+</resources>

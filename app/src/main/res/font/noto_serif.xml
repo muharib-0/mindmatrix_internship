@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Noto Serif font family definition.
+    Download from Google Fonts: https://fonts.google.com/noto/specimen/Noto+Serif
+    Place the TTF files in res/font/:
+      - noto_serif_regular.ttf
+      - noto_serif_bold.ttf
+      - noto_serif_italic.ttf
+
+    NOTE: If using Downloadable Fonts via Google Fonts in Android Studio,
+    replace this file with the auto-generated version.
+    The font files (noto_serif_regular.ttf etc.) must be placed manually in res/font/.
+    Without the actual TTF files, the app will fall back to the system serif font.
+-->
+<font-family xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <font
+        android:font="@font/noto_serif_regular"
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        app:font="@font/noto_serif_regular"
+        app:fontStyle="normal"
+        app:fontWeight="400" />
+
+    <font
+        android:font="@font/noto_serif_bold"
+        android:fontStyle="normal"
+        android:fontWeight="700"
+        app:font="@font/noto_serif_bold"
+        app:fontStyle="normal"
+        app:fontWeight="700" />
+
+    <font
+        android:font="@font/noto_serif_italic"
+        android:fontStyle="italic"
+        android:fontWeight="400"
+        app:font="@font/noto_serif_italic"
+        app:fontStyle="italic"
+        app:fontWeight="400" />
+
+</font-family>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Lotus motif divider in sandstone gold.
+  Uses a layer-list to simulate a lotus/floral pattern with a gold line and central diamond.
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Base gold line -->
+    <item
+        android:top="4dp"
+        android:bottom="4dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#C8860A" />
+        </shape>
+    </item>
+    <!-- Left petal accent -->
+    <item
+        android:gravity="center_horizontal"
+        android:width="6dp"
+        android:height="10dp">
+        <rotate
+            android:fromDegrees="45"
+            android:pivotX="50%"
+            android:pivotY="50%">
+            <shape android:shape="rectangle">
+                <solid android:color="#C8860A" />
+            </shape>
+        </rotate>
+    </item>
+</layer-list>

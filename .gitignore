@@ -1,0 +1,34 @@
+# Built files
+.gradle/
+build/
+*.apk
+*.aab
+*.ap_
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+*.iws
+local.properties
+captures/
+.externalNativeBuild/
+.cxx/
+*.DS_Store
+
+# Kotlin
+*.class
+*.kotlin_module
+
+# Room schemas (optional: keep if you want schema history)
+app/schemas/
+
+# Test results
+test-results/
+jacoco/
+
+# Gradle wrapper (keep gradlew scripts, ignore binary)
+!gradle/wrapper/gradle-wrapper.jar
+
+# OS
+Thumbs.db
+desktop.ini

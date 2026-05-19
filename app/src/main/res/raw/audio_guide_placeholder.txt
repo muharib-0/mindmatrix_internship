@@ -1,0 +1,8 @@
+This is a placeholder for the audio guide file.
+Replace this file with actual audio content (MP3/OGG) named audio_guide_placeholder.mp3
+and update the reference in SiteRepository.kt accordingly.
+
+To add real audio guides:
+1. Place MP3 files in res/raw/
+2. Name them: audio_ka001.mp3, audio_ka002.mp3, etc.
+3. Update audioResId in each HeritageSite in SiteRepository.kt

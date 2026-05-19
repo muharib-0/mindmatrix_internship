@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Hero image / placeholder -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp">
+
+            <ImageView
+                android:id="@+id/image_site_detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/cd_site_thumbnail" />
+
+            <!-- Large initial letter overlay -->
+            <TextView
+                android:id="@+id/text_site_detail_initial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="80sp"
+                android:textColor="#FFFFFFFF"
+                android:textStyle="bold"
+                android:fontFamily="@font/noto_serif"
+                android:alpha="0.5" />
+
+            <!-- Gradient overlay for text legibility -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/gradient_bottom" />
+
+        </FrameLayout>
+
+        <!-- Gold border line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/color_secondary" />
+
+        <!-- Content area -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Site Name -->
+            <TextView
+                android:id="@+id/text_site_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_primary"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/noto_serif"
+                android:lineSpacingMultiplier="1.3" />
+
+            <!-- Lotus divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/divider_lotus"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Action buttons row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <!-- Audio Guide Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_audio_guide"
+                    style="@style/Widget.MaterialComponents.Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    android:text="@string/label_play_audio"
+                    android:textSize="12sp"
+                    android:contentDescription="@string/cd_audio_button"
+                    app:backgroundTint="@color/color_primary"
+                    app:icon="@drawable/ic_play"
+                    app:iconGravity="start"
+                    app:cornerRadius="8dp" />
+
+                <!-- Language Toggle Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_toggle_language"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    android:text="@string/label_switch_kannada"
+                    android:textSize="12sp"
+                    android:contentDescription="@string/cd_language_toggle"
+                    app:strokeColor="@color/color_secondary"
+                    app:cornerRadius="8dp" />
+
+            </LinearLayout>
+
+            <!-- Description Section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_description"
+                style="@style/TextAppearance.Virasat.SectionHeader" />
+
+            <TextView
+                android:id="@+id/text_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_on_surface"
+                android:textSize="14sp"
+                android:fontFamily="@font/noto_serif"
+                android:lineSpacingMultiplier="1.6"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Lotus divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/divider_lotus"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Architectural Note Section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_architectural_note"
+                style="@style/TextAppearance.Virasat.SectionHeader" />
+
+            <TextView
+                android:id="@+id/text_architectural_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_on_surface"
+                android:textSize="14sp"
+                android:fontFamily="@font/noto_serif"
+                android:lineSpacingMultiplier="1.6"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Lotus divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/divider_lotus"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Local Legend Section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_local_legend"
+                style="@style/TextAppearance.Virasat.SectionHeader" />
+
+            <!-- Legend card with warm bg -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/color_legend_bg"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/color_secondary"
+                app:strokeWidth="1dp">
+
+                <TextView
+                    android:id="@+id/text_local_legend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_on_surface"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/noto_serif"
+                    android:lineSpacingMultiplier="1.6"
+                    android:padding="14dp"
+                    android:textStyle="italic" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Hidden Fact Section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_hidden_fact"
+                style="@style/TextAppearance.Virasat.SectionHeader" />
+
+            <TextView
+                android:id="@+id/text_hidden_fact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_text_secondary"
+                android:textSize="13sp"
+                android:fontFamily="@font/noto_serif"
+                android:lineSpacingMultiplier="1.6"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Check-In Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_check_in"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="@string/label_check_in"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/noto_serif"
+                app:backgroundTint="@color/color_secondary"
+                app:cornerRadius="10dp"
+                android:layout_marginBottom="32dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

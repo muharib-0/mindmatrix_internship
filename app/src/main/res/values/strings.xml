@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App name -->
+    <string name="app_name">Virasat — Namma Guide</string>
+    <string name="app_name_kannada">ವಿರಾಸತ್ — ನಮ್ಮ ಮಾರ್ಗದರ್ಶಿ</string>
+
+    <!-- Screen Titles -->
+    <string name="title_discovery">Discover Heritage</string>
+    <string name="title_site_detail">Site Details</string>
+    <string name="title_qr_scanner">QR Scanner</string>
+    <string name="title_passport">My Passport</string>
+
+    <!-- Bottom Navigation -->
+    <string name="nav_discover">Discover</string>
+    <string name="nav_qr_scan">Scan QR</string>
+    <string name="nav_passport">Passport</string>
+
+    <!-- Discovery Screen -->
+    <string name="label_discover_title">Hidden Temples of Karnataka</string>
+    <string name="label_discover_subtitle">Off the beaten path, carved in stone</string>
+    <string name="label_distance">%1$.1f km away</string>
+
+    <!-- Site Detail Screen -->
+    <string name="label_description">About this Site</string>
+    <string name="label_architectural_note">Architectural Significance</string>
+    <string name="label_local_legend">Local Legend</string>
+    <string name="label_hidden_fact">🔓 Hidden Fact (QR Unlocked)</string>
+    <string name="label_play_audio">▶ Play Audio Guide</string>
+    <string name="label_pause_audio">⏸ Pause Audio Guide</string>
+    <string name="label_switch_kannada">ಕನ್ನಡದಲ್ಲಿ ನೋಡಿ</string>
+    <string name="label_switch_english">View in English</string>
+    <string name="label_check_in">📍 Check In Here</string>
+    <string name="label_already_checked_in">✓ Visited</string>
+    <string name="msg_checked_in">Checked in at %1$s!</string>
+
+    <!-- QR Scanner -->
+    <string name="label_scan_qr_instruction">Point camera at a heritage site QR code</string>
+    <string name="label_qr_found">✓ Found site: %1$s</string>
+    <string name="label_camera_permission_denied">Camera permission is required to scan QR codes.\nPlease grant it in Settings.</string>
+    <string name="label_scan_overlay">Align QR code within the frame</string>
+
+    <!-- Passport Screen -->
+    <string name="label_passport_title">My Heritage Passport</string>
+    <string name="label_passport_empty_title">No stamps yet!</string>
+    <string name="label_passport_empty_subtitle">Visit heritage sites and check in to collect stamps in your passport.</string>
+    <string name="label_stamps_collected">stamps collected</string>
+    <string name="label_visited_on">Visited on</string>
+    <string name="label_stamp_badge">Stamp</string>
+
+    <!-- Content Descriptions (Accessibility) -->
+    <string name="cd_site_thumbnail">Site thumbnail image</string>
+    <string name="cd_audio_button">Play or pause audio guide</string>
+    <string name="cd_stamp_icon">Heritage stamp badge</string>
+    <string name="cd_language_toggle">Toggle language between English and Kannada</string>
+</resources>
